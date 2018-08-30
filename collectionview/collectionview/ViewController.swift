@@ -14,8 +14,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     let streamImage = [UIImage(named:"macoshero"),UIImage(named:"wjoel_180413_1777_android_001.1523625143"),UIImage(named:"Fotolia_76145133_XS.c"),UIImage(named:"head_bigdata")]
     
-    let streamDescription = ["best of all streams","son of macOS","time pass",
-                             "does this really exist?"]
+    let streamDescription = ["macOS is developed by Apple.","Android is a mobile operating system developed by Google.","Problem solving is used to find solutions to problems.","Data science is an interdisciplinary field that uses scientific methods to process data."]
     
     
     override func viewDidLoad() {
@@ -55,18 +54,17 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 extension ViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insertForSectionAt section: Int) -> UIEdgeInsets{
         return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        
+
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
+
         let b = collectionView.bounds
-        return CGSize(width: b.width/2, height: b.height/3)
+        return CGSize(width: b.width/2, height: b.height/2.5)
     }
-    //
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
